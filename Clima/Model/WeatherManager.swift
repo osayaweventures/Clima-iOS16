@@ -17,8 +17,9 @@ protocol WeatherManagerDelegate {
 struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
+    var apiKey: String = ""
     
-    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?appid=daf7c5229d2cd26ca998f8b7d78537ce&unit=metric"
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?unit=metric"
     
     func fetchWeatherInfo(cityName: String) {
         let urlString = "\(apiEndpoint)&q=\(cityName)"
@@ -31,8 +32,11 @@ struct WeatherManager {
     }
     
     func performRequest(with urlString: String) -> Void {
+        
+        let request = "\(urlString)&appid=\(apiKey)"
+        
         //1. Create a URL
-        if let url = URL(string: urlString) {
+        if let url = URL(string: request) {
             //2. Create a URL session
             let session = URLSession(configuration: .default)
             
