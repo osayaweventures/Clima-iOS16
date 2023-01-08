@@ -28,7 +28,7 @@
 		ADAA27B9231BBFB300365194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADAA27BC231BBFB300365194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADAA27BE231BBFB300365194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D65BC5CB2969B66E004A03C3 /* APIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKeys.xcconfig; sourceTree = "<group>"; };
+		D6453B9C296AC33C00D55FA9 /* APIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKeys.xcconfig; sourceTree = "<group>"; };
 		D65BC5CE2969BF84004A03C3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherModel.swift; path = Clima/WeatherModel.swift; sourceTree = SOURCE_ROOT; };
 		D65BC5D02969BFC9004A03C3 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherData.swift; path = Clima/WeatherData.swift; sourceTree = SOURCE_ROOT; };
 		D65BC5D22969C00D004A03C3 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherManager.swift; path = Clima/WeatherManager.swift; sourceTree = SOURCE_ROOT; };
@@ -74,7 +74,7 @@
 				ADAA27B9231BBFB300365194 /* Assets.xcassets */,
 				ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */,
 				ADAA27BE231BBFB300365194 /* Info.plist */,
-				D65BC5CD2969B9AA004A03C3 /* Secrets */,
+				D6453B9D296AC38600D55FA9 /* Secrets */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -95,6 +95,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D6453B9D296AC38600D55FA9 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				D6453B9C296AC33C00D55FA9 /* APIKeys.xcconfig */,
+			);
+			path = Secrets;
+			sourceTree = "<group>";
+		};
 		D65BC5CC2969B7C9004A03C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +111,6 @@
 				D65BC5D22969C00D004A03C3 /* WeatherManager.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D65BC5CD2969B9AA004A03C3 /* Secrets */ = {
-			isa = PBXGroup;
-			children = (
-				D65BC5CB2969B66E004A03C3 /* APIKeys.xcconfig */,
-			);
-			path = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +218,7 @@
 /* Begin XCBuildConfiguration section */
 		ADAA27BF231BBFB300365194 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D65BC5CB2969B66E004A03C3 /* APIKeys.xcconfig */;
+			baseConfigurationReference = D6453B9C296AC33C00D55FA9 /* APIKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -280,7 +280,7 @@
 		};
 		ADAA27C0231BBFB300365194 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D65BC5CB2969B66E004A03C3 /* APIKeys.xcconfig */;
+			baseConfigurationReference = D6453B9C296AC33C00D55FA9 /* APIKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -341,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7D33GSZV3K;
 				INFOPLIST_FILE = Clima/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7D33GSZV3K;
 				INFOPLIST_FILE = Clima/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

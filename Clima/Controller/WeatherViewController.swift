@@ -37,7 +37,6 @@ class WeatherViewController: UIViewController {
 
     @IBAction func searchPressed(_ sender: UIButton) {
         searchField.endEditing(true)
-        print(searchField.text ?? "empty")
     }
     
     @IBAction func locationPressed(_ sender: UIButton) {
