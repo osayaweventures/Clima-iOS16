@@ -50,7 +50,7 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchField.endEditing(true)
-        print(textField.text!)
+
         return true
     }
     
